@@ -5,10 +5,16 @@ let oneEuroIs = {
     "GBP": 0.8, // british pound
 }
 
-let fromDollarToYen = (usd) => { usd*() }
+let fromDollarToYen = (usd) => { 
+    return usd*(1/1.2)*127.9 
+}
 
-let fromEuroToDollar = (eur) => { eur*1.2 }
+let fromEuroToDollar = (eur) => {
+    return eur*1.2 
+}
 
-let fromYenToPound = (yen) => { yen*(0.8*127.9) }
+let fromYenToPound = (yen) => { 
+    return yen*(1/127.9)*0.8 
+}
 
-export {fromDollarToYen,fromEuroToDollar,fromYenToPound};
+module.exports = {fromDollarToYen,fromEuroToDollar,fromYenToPound};

@@ -1,17 +1,18 @@
-import {fromDollarToYen,fromEuroToDollar,fromYenToPound} from "app.js";
-
 
 test(`return the amount of usd to yen`, () => {
-    let yens = fromDollarToYen(100);
-    expect(yens).toBe(15348);
+    const { fromDollarToYen } = require('./app.js')
+    let yens = Math.floor(fromDollarToYen(100));
+    expect(yens).toBe(10658);
 });
 
 test(`return the amount of euro to dollar`, () => {
+    const { fromEuroToDollar } = require('./app.js')
     let dollar = fromEuroToDollar(100);
     expect(dollar).toBe(120);
 });
 
 test(`return the amount of yen to pound`, () => {
-    let pound = fromYenToPound(100);
-    expect(pound).toBe();
+    const { fromYenToPound } = require('./app.js')
+    let pound = Math.floor(fromYenToPound(100));
+    expect(pound).toBe(0);
 });
